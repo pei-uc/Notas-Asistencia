@@ -435,7 +435,7 @@ function crearBotonAgregarRamo(){
 
 function actualizarBotonesAgregar(){
 
-  grid.querySelectorAll(".add-ramo-card").forEach(el=>el.remove());
+  document.querySelectorAll(".add-ramo-card").forEach(el=>el.remove());
 
   grid.appendChild(crearBotonAgregarRamo());
 
@@ -621,9 +621,7 @@ function cargarAsistencia(){
     card.querySelector(".clases").dispatchEvent(new Event("input"));
 
   });
-   
-crearBotonAgregarAsistencia();
-   
+
 }
 
 /* =========================
@@ -937,8 +935,6 @@ dragged = null;
 
 guardarDatos();
 guardarAsistencia();
-actualizarBotonesAgregar();
-actualizarBotonAgregarAsistencia();
 }
 
 });
