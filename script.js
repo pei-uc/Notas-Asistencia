@@ -623,6 +623,7 @@ function cargarAsistencia(){
   });
    
 crearBotonAgregarAsistencia();
+   
 }
 
 /* =========================
