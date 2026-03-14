@@ -935,6 +935,8 @@ dragged = null;
 
 guardarDatos();
 guardarAsistencia();
+actualizarBotonesAgregar();
+actualizarBotonAgregarAsistencia();
 }
 
 });
