@@ -435,7 +435,7 @@ function crearBotonAgregarRamo(){
 
 function actualizarBotonesAgregar(){
 
-  document.querySelectorAll(".add-ramo-card").forEach(el=>el.remove());
+  grid.querySelectorAll(".add-ramo-card").forEach(el=>el.remove());
 
   grid.appendChild(crearBotonAgregarRamo());
 
