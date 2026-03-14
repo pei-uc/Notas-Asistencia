@@ -435,7 +435,7 @@ function crearBotonAgregarRamo(){
 
 function actualizarBotonesAgregar(){
 
-  document.querySelectorAll(".add-ramo-card").forEach(el=>el.remove());
+  grid.querySelectorAll(".add-ramo-card").forEach(el=>el.remove());
 
   grid.appendChild(crearBotonAgregarRamo());
 
@@ -580,12 +580,10 @@ function guardarAsistencia(){
   document.querySelectorAll("#asistenciaGrid .card:not(.add-ramo-card)").forEach(card=>{
 
     const ramo={
-
       titulo:card.querySelector(".ramo-titulo").value,
       clases:card.querySelector(".clases").value,
       faltas:card.querySelector(".faltas").value,
       requerido:card.querySelector(".porcentaje-apr").value
-
     };
 
     ramos.push(ramo);
@@ -594,6 +592,7 @@ function guardarAsistencia(){
 
   localStorage.setItem("asistenciaRamos",JSON.stringify(ramos));
 
+  actualizarBotonAgregarAsistencia(); 
 }
 
 /* ===== CARGAR ASISTENCIA ===== */
@@ -913,7 +912,7 @@ let dragged = null;
 
 container.addEventListener("dragstart", e => {
 
-if(e.target.closest("input, button, table")) {
+if(e.target.closest("input, button")) {
   e.preventDefault();
   return;
 }
