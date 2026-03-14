@@ -621,7 +621,8 @@ function cargarAsistencia(){
     card.querySelector(".clases").dispatchEvent(new Event("input"));
 
   });
-
+   
+crearBotonAgregarAsistencia();
 }
 
 /* =========================
